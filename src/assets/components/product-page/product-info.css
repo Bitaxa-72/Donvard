@@ -112,6 +112,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
+  transition: all .2s;
 }
 
 .productInfo__faq-icon {
@@ -131,6 +132,7 @@
   height: 2px;
   background-color: #111;
   transform: translate(-50%, -50%);
+  transition: background-color 0.2s;
 }
 
 .productInfo__faq-icon::after {
@@ -151,6 +153,14 @@
   font-size: 16px;
   font-weight: 300;
   line-height: normal;
+}
+.productInfo__faq-question:hover .productInfo__faq-title {
+  color: #104e9e;
+}
+
+.productInfo__faq-question:hover .productInfo__faq-icon::before,
+.productInfo__faq-question:hover .productInfo__faq-icon::after {
+  background-color: #104e9e;
 }
 
 @media (max-width: 1200px) {

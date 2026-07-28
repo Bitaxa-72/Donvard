@@ -1,8 +1,10 @@
 @import url('./breadcrumbs/breadcrumbs.css');
+@import url('./cart-fly/cart-fly.css');
 @import url('./catalog/catalog.css');
 @import url('./category/category.css');
 @import url('./header/header.css');
 @import url('./footer/footer.css');
+@import url('./lk/lk.css');
 @import url('./not-found/not-found.css');
 @import url('./product-page/product-hero.css');
 @import url('./product-page/product-info.css');

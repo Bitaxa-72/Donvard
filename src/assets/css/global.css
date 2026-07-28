@@ -71,6 +71,7 @@ html {
 }
 
 body {
+  padding-top: 185px;
   font-family: Ubuntu, sans-serif;
   font-size: 14px;
   color: #111;
@@ -78,6 +79,18 @@ body {
   font-weight: 400;
   line-height: 16px;
   font-style: normal;
+}
+
+@media (max-width: 1080px) {
+  body {
+    padding-top: 155px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    padding-top: 141px;
+  }
 }
 
 h1,
@@ -113,7 +126,11 @@ img {
 }
 
 button {
+  padding: 0;
+  border: 0;
+  color: inherit;
   font: inherit;
+  background: transparent;
   cursor: pointer;
 }
 

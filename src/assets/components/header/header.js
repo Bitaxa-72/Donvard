@@ -9,28 +9,12 @@
   const mobileMenu = header.querySelector(".mobile-menu");
   const menuToggles = header.querySelectorAll(".mobile-menu__toggle");
 
-  const updateMobileMenuOffset = () => {
-    header.style.setProperty("--mobile-menu-top", `${header.offsetHeight}px`);
-  };
-
   burger?.addEventListener("click", () => {
     const isOpen = header.classList.toggle("header--mobile-menu-open");
 
     burger.setAttribute("aria-expanded", String(isOpen));
     mobileMenu?.setAttribute("aria-hidden", String(!isOpen));
     document.body.classList.toggle("mobile-menu-is-open", isOpen);
-
-    if (isOpen) {
-      updateMobileMenuOffset();
-    } else {
-      header.style.removeProperty("--mobile-menu-top");
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    if (header.classList.contains("header--mobile-menu-open")) {
-      updateMobileMenuOffset();
-    }
   });
 
   menuToggles.forEach((toggle) => {
