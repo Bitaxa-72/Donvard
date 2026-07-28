@@ -1,6 +1,7 @@
 @layer components;
 
 .header {
+  background-color: #fff;
 }
 .topbar {
   display: flex;
@@ -90,6 +91,9 @@
 }
 .mobile-menu {
   display: none;
+}
+body.mobile-menu-is-open {
+  overflow: hidden;
 }
 .header__nav-wrapper {
   background: #104e9e;
@@ -239,6 +243,7 @@
     display: none;
     min-height: calc(100dvh - 100%);
     overflow-y: auto;
+    overscroll-behavior: contain;
     background: #104e9e;
     color: #fff;
   }
@@ -398,7 +403,7 @@
     padding-left: 10px;
     padding-right: 0px;
   }
-  .burger{
+  .burger {
     padding: 10px;
   }
 }

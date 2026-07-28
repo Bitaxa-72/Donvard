@@ -91,6 +91,10 @@ h6 {
   font-weight: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -108,10 +112,24 @@ img {
   max-width: 100%;
 }
 
-button,
-input {
+button {
   font: inherit;
   cursor: pointer;
+}
+
+input {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  outline: none;
+  appearance: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
 }
 
 button {

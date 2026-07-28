@@ -18,6 +18,7 @@
 
     burger.setAttribute("aria-expanded", String(isOpen));
     mobileMenu?.setAttribute("aria-hidden", String(!isOpen));
+    document.body.classList.toggle("mobile-menu-is-open", isOpen);
 
     if (isOpen) {
       updateMobileMenuOffset();

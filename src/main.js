@@ -1,3 +1,8 @@
 import './main.css'
+import './assets/components/catalog/catalog.js'
 import './assets/components/header/header.js'
 import './assets/components/footer/footer.js'
+import './assets/components/not-found/not-found.js'
+import './assets/components/product-page/product-hero.js'
+import './assets/components/product-page/product-info.js'
+import './assets/components/product-page/product-related.js'

@@ -1,0 +1,183 @@
+@layer components;
+
+.productInfo {
+  margin-bottom: 100px;
+}
+.container {
+}
+.container--productInfo {
+}
+.productInfo__actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.productInfo__btn {
+  box-sizing: border-box;
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background: rgba(17, 17, 17, 0.02);
+  padding: 14px 30px;
+  transition: all 0.2s;
+}
+.productInfo__btn:hover {
+  border: 1px solid rgba(17, 17, 17, 0.5);
+}
+.productInfo__btn.productInfo__btn--active {
+  color: #104e9e;
+  background-color: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  box-shadow: inset 0 2px 0 #104e9e;
+}
+.productInfo__btn.productInfo__btn--active:hover {
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  box-shadow: inset 0 2px 0 #104e9e;
+}
+.productInfo__tabs {
+}
+.productInfo__tab {
+  display: none;
+}
+.productInfo__tab.productInfo__tab--active {
+  display: block;
+}
+.productInfo__tab--specifications.productInfo__tab.productInfo__tab--active {
+  display: flex;
+  gap: 107px;
+}
+
+.productInfo__specifications-title {
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: normal;
+}
+.productInfo__tab--specifications .productHero__specification{
+  margin-top: 16px;
+}
+
+.productInfo__faq {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  border-radius: 5px;
+  background: rgba(17, 17, 17, 0.02);
+  padding-top: 20px;
+  padding-bottom: 22px;
+}
+
+.productInfo__faq-item {
+  padding: 20px 60px;
+  border-radius: 5px;
+}
+
+.productInfo__faq-item + .productInfo__faq-item {
+  position: relative;
+}
+
+.productInfo__faq-item + .productInfo__faq-item::before {
+  position: absolute;
+  top: -9px;
+  left: 60px;
+  content: "";
+  width: calc(100% - 120px);
+  height: 1px;
+  background: rgba(17, 17, 17, 0.1);
+}
+
+.productInfo__faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+}
+
+
+.productInfo__faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.productInfo__faq-question::marker {
+  content: "";
+}
+
+.productInfo__faq-title {
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.productInfo__faq-icon {
+  position: relative;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.productInfo__faq-icon::before,
+.productInfo__faq-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 16px;
+  height: 2px;
+  background-color: #111;
+  transform: translate(-50%, -50%);
+}
+
+.productInfo__faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.productInfo__faq-item[open] .productInfo__faq-icon::after {
+  opacity: 0;
+}
+
+.productInfo__faq-content {
+  margin-top: 16px;
+}
+
+.productInfo__faq-text {
+  margin: 0;
+  color: #111;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+@media (max-width: 1200px) {
+  .productInfo__actions{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .productInfo__faq {
+    max-width: 100%;
+  }
+
+  .productInfo__faq-item {
+    padding: 20px;
+  }
+
+  .productInfo__faq-item + .productInfo__faq-item::before {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+  .productInfo{
+    margin-bottom: 70px;
+  }
+.productInfo__tab--specifications.productInfo__tab.productInfo__tab--active {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+}

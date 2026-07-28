@@ -21,9 +21,14 @@ export default defineConfig({
       input: {
         main: resolve(workspaceRoot, 'index.html'),
         catalog: resolve(workspaceRoot, 'catalog.html'),
+        category: resolve(workspaceRoot, 'category.html'),
         productPage: resolve(
           workspaceRoot,
           'product-page.html'
+        ),
+        productPageOutOfStock: resolve(
+          workspaceRoot,
+          'product-page-out-of-stock.html'
         ),
         cart: resolve(workspaceRoot, 'cart.html'),
         checkout: resolve(workspaceRoot, 'checkout.html'),

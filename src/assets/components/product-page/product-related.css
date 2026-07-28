@@ -1,0 +1,31 @@
+@layer components;
+
+.productRelated {
+  margin-bottom: 100px;
+}
+.container {
+}
+.container--productRelated {
+}
+.productRelated__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+.productRelated__products {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .productRelated__products {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .productRelated {
+    margin-bottom: 70px;
+  }
+}
