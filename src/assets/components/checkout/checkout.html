@@ -1,0 +1,464 @@
+<section class="checkout">
+  <div class="container container--checkout">
+    <h1 class="checkout__title">Оформление заказа</h1>
+    <form class="checkout__inner" action="#" method="post">
+      <div class="checkout__inner-left">
+        <div class="checkout__block checkout__type">
+          <h2 class="checkout__stat-title">1. Тип покупателя</h2>
+          <div class="checkout__flex">
+            <div class="checkout__radioFlex">
+              <input
+                id="checkout-buyer-person"
+                type="radio"
+                name="buyer_type"
+                value="person"
+                aria-label="Физическое лицо"
+                checked
+              />
+              Физическое лицо
+            </div>
+            <div class="checkout__radioFlex">
+              <input
+                id="checkout-buyer-company"
+                type="radio"
+                name="buyer_type"
+                value="company"
+                aria-label="Юридическое лицо"
+              />
+              Юридическое лицо
+            </div>
+          </div>
+        </div>
+        <div class="checkout__block checkout__contacts">
+          <h2 class="checkout__stat-title">2. Контактные данные</h2>
+          <div class="checkout__flex">
+            <div class="checkout__field">
+              <label class="checkout__label" for="checkout-name">ФИО *</label>
+              <input
+                class="checkout__input"
+                id="checkout-name"
+                name="customer_name"
+                type="text"
+                autocomplete="name"
+                placeholder="Введите ФИО"
+                required
+              />
+            </div>
+            <div class="checkout__field">
+              <label class="checkout__label" for="checkout-email"
+                >E-mail *</label
+              >
+              <input
+                class="checkout__input"
+                id="checkout-email"
+                name="customer_email"
+                type="email"
+                autocomplete="email"
+                placeholder="Введите вашу почту"
+                required
+              />
+            </div>
+          </div>
+          <div class="checkout__flex">
+            <div class="checkout__field">
+              <label class="checkout__label" for="checkout-phone"
+                >Номер телефона *</label
+              >
+              <div class="checkout__phone">
+                <label class="checkout__phone-country">
+                  <img
+                    class="checkout__phone-flag"
+                    width="32"
+                    height="24"
+                    alt=""
+                    src="/img/checkout-phone-flag-ru.svg"
+                  />
+                  <select
+                    class="checkout__phone-select"
+                    name="phone_country"
+                    aria-label="Страна телефона"
+                  >
+                    <option value="RU" data-code="+7" selected>Россия +7</option>
+                  </select>
+                  <img
+                    class="checkout__phone-arrow"
+                    width="13"
+                    height="8"
+                    alt=""
+                    src="/img/checkout-phone-arrow.svg"
+                  />
+                </label>
+                <div class="checkout__phone-field">
+                  <span class="checkout__phone-view" aria-hidden="true">
+                    <span class="checkout__phone-value" data-phone-mask-value></span><span class="checkout__phone-rest" data-phone-mask-rest>+7 (000) 000-00-00</span>
+                  </span>
+                  <input
+                    class="checkout__input checkout__phone-input"
+                    id="checkout-phone"
+                    name="customer_phone"
+                    type="tel"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
+                    maxlength="18"
+                    data-phone-mask
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <p class="checkout__descr">
+              После оформления заказа будет автоматически создан личный кабинет.
+              На Email придет письмо для подтверждения регистрации и данные для
+              входа.
+            </p>
+          </div>
+        </div>
+        <div class="checkout__block checkout__address">
+          <h2 class="checkout__stat-title">3. Адрес доставки</h2>
+          <div class="checkout__flex">
+            <div class="checkout__field">
+              <label class="checkout__label" for="checkout-city">Город *</label>
+              <div class="checkout__city" data-city-select>
+                <div class="checkout__city-field">
+                  <input
+                    class="checkout__input checkout__city-input"
+                    id="checkout-city"
+                    name="delivery_city"
+                    type="text"
+                    autocomplete="new-password"
+                    placeholder="Введите ваш город"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-controls="checkout-city-list"
+                    data-city-input
+                    required
+                  />
+                  <button
+                    class="checkout__city-toggle"
+                    type="button"
+                    aria-label="Показать города"
+                    data-city-toggle
+                  >
+                    <img
+                      class="checkout__city-arrow"
+                      width="13"
+                      height="8"
+                      alt=""
+                      src="/img/checkout-city-arrow.svg"
+                    />
+                  </button>
+                </div>
+                <ul
+                  class="checkout__city-list"
+                  id="checkout-city-list"
+                  data-city-list
+                  hidden
+                ></ul>
+              </div>
+            </div>
+            <div class="checkout__field">
+              <label class="checkout__label" for="checkout-postcode"
+                >Индекс *</label
+              >
+              <input
+                class="checkout__input"
+                id="checkout-postcode"
+                name="delivery_postcode"
+                type="text"
+                autocomplete="postal-code"
+                inputmode="numeric"
+                placeholder="Введите ваш индекс"
+                required
+              />
+            </div>
+          </div>
+          <div class="checkout__flex checkout__flex--address">
+            <div class="checkout__field checkout__field--street">
+              <label class="checkout__label" for="checkout-street"
+                >Улица *</label
+              >
+              <input
+                class="checkout__input"
+                id="checkout-street"
+                name="delivery_street"
+                type="text"
+                autocomplete="address-line1"
+                placeholder="Введите вашу улицу"
+                required
+              />
+            </div>
+            <div class="checkout__flex checkout__flex--home">
+              <div class="checkout__field">
+                <label class="checkout__label" for="checkout-house"
+                  >Дом *</label
+                >
+                <input
+                  class="checkout__input"
+                  id="checkout-house"
+                  name="delivery_house"
+                  type="text"
+                  autocomplete="address-line2"
+                  placeholder="Дом *"
+                  required
+                />
+              </div>
+              <div class="checkout__field">
+                <label class="checkout__label" for="checkout-apartment"
+                  >Квартира
+                </label>
+                <input
+                  class="checkout__input"
+                  id="checkout-apartment"
+                  name="delivery_apartment"
+                  type="text"
+                  placeholder="Номер квартиры"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="checkout__field checkout__field--textarea">
+            <label class="checkout__label" for="checkout-comment"
+              >Комментарий курьеру
+            </label>
+            <textarea
+              class="checkout__input"
+              id="checkout-comment"
+              name="delivery_comment"
+              placeholder="Комментарий"
+            ></textarea>
+          </div>
+        </div>
+        <div class="checkout__block checkout__payment">
+          <h2 class="checkout__stat-title">4. Способ оплаты</h2>
+          <div class="checkout__flex">
+            <div class="checkout__radioFlex">
+              <input
+                id="checkout-payment-online"
+                type="radio"
+                name="payment_method"
+                value="online"
+                aria-label="Онлайн-оплата через Юкасса"
+                checked
+              />
+              <div class="checkout__radioFlex-info">
+                Онлайн-оплата через Юкасса
+                <p class="checkout__radioFlex-descr">
+                  Вы будете перенаправлены на сайт ЮKassa для оплаты заказа.
+                </p>
+              </div>
+            </div>
+            <div class="checkout__radioFlex">
+              <input
+                id="checkout-payment-invoice"
+                type="radio"
+                name="payment_method"
+                value="invoice"
+                aria-label="Оплата по счету"
+              />
+              <div class="checkout__radioFlex-info">
+                Оплата по счету (для юр.лиц)
+                <p class="checkout__radioFlex-descr">
+                  Счет на оплату будет отправлен на указанный Email.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout__inner-right">
+        <div class="checkout__total">
+          <h3 class="checkout__total-title">Ваш заказ</h3>
+          <ul class="checkout__total-list">
+            <li class="checkout__total-item">
+              <img
+                class="checkout__total-img"
+                width=""
+                height=""
+                alt=""
+                src="/img/checkout.jpg"
+              />
+              <div class="checkout__total-flex">
+                <h2 class="checkout__total-prod">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+                <div class="checkout__total-volue">
+                  <span class="checkout__total-count">1 шт</span>
+                  <span class="checkout__total-price">14 367 ₽</span>
+                </div>
+              </div>
+            </li>
+            <li class="checkout__total-item">
+              <img
+                class="checkout__total-img"
+                width=""
+                height=""
+                alt=""
+                src="/img/checkout.jpg"
+              />
+              <div class="checkout__total-flex">
+                <h2 class="checkout__total-prod">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+                <div class="checkout__total-volue">
+                  <span class="checkout__total-count">1 шт</span>
+                  <span class="checkout__total-price">14 367 ₽</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="checkout__sum-list">
+            <li class="checkout__sum-item">
+              Товаров на сумму:
+              <span class="checkout__sum-volue">824 367 ₽</span>
+            </li>
+            <li class="checkout__sum-item">
+              Скидка:
+              <span class="checkout__sum-volue checkout__sum-volue--red"
+                >- 3 367 ₽</span
+              >
+            </li>
+            <li class="checkout__sum-item">
+              Доставка:
+              <span class="checkout__sum-volue">1 367 ₽</span>
+            </li>
+            <li class="checkout__sum-item">
+              Налог:
+              <span class="checkout__sum-volue">867 ₽</span>
+            </li>
+          </ul>
+          <div class="checkout__total-footer">
+            Итого:
+            <span class="checkout__summation"> 825 367 ₽ </span>
+          </div>
+          <button class="checkout__submit" type="submit">Оформить заказ</button>
+        </div>
+        <ul class="checkout__advantages">
+          <li class="checkout__advantages-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M8.33268 39.5833C5.56602 39.5833 2.96601 38.1167 1.56601 35.7333C0.816013 34.5333 0.416016 33.1167 0.416016 31.6667C0.416016 27.3 3.96602 23.75 8.33268 23.75C12.6993 23.75 16.2493 27.3 16.2493 31.6667C16.2493 33.1167 15.8494 34.5334 15.0994 35.75C13.6994 38.1167 11.0993 39.5833 8.33268 39.5833ZM8.33268 26.25C5.34935 26.25 2.91602 28.6833 2.91602 31.6667C2.91602 32.65 3.18268 33.6166 3.69935 34.45C4.68268 36.1166 6.41602 37.0833 8.33268 37.0833C10.2493 37.0833 11.9827 36.1 12.966 34.4667C13.4827 33.6167 13.7493 32.6667 13.7493 31.6667C13.7493 28.6833 11.316 26.25 8.33268 26.25Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M7.38216 34.5668C7.0655 34.5668 6.74883 34.4501 6.49883 34.2001L4.84883 32.5502C4.36549 32.0668 4.36549 31.2667 4.84883 30.7834C5.33216 30.3001 6.13216 30.3001 6.6155 30.7834L7.4155 31.5835L10.0822 29.1167C10.5822 28.6501 11.3822 28.6835 11.8488 29.1835C12.3155 29.6835 12.2822 30.4835 11.7822 30.9501L8.23216 34.2334C7.98216 34.4501 7.68216 34.5668 7.38216 34.5668Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M10.3161 13.0168C9.91609 13.0168 9.54943 12.8335 9.29943 12.5002C9.0161 12.1168 8.98276 11.6168 9.19943 11.2001C9.48276 10.6334 9.88276 10.0835 10.3994 9.5835L15.8161 4.15015C18.5828 1.40015 23.0828 1.40015 25.8494 4.15015L28.7661 7.11686C29.9994 8.33353 30.7494 9.96686 30.8328 11.7002C30.8494 12.0835 30.6994 12.4502 30.4161 12.7002C30.1328 12.9502 29.7494 13.0668 29.3828 13.0001C29.0494 12.9501 28.6994 12.9335 28.3328 12.9335H11.6661C11.2661 12.9335 10.8828 12.9668 10.4994 13.0168C10.4494 13.0168 10.3828 13.0168 10.3161 13.0168ZM13.0994 10.4168H28.0328C27.8161 9.85016 27.4661 9.33351 26.9994 8.86684L24.0661 5.90013C22.2828 4.13346 19.3661 4.13346 17.5661 5.90013L13.0994 10.4168Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M28.3341 37.9166H12.7175C12.1841 37.9166 11.7174 37.5833 11.5341 37.1C11.3508 36.6 11.5008 36.0499 11.9008 35.7166C12.3008 35.3833 12.6674 34.95 12.9341 34.4833C13.4674 33.6333 13.7341 32.6666 13.7341 31.6833C13.7341 28.7 11.3008 26.2666 8.31745 26.2666C6.76745 26.2666 5.28411 26.9333 4.25078 28.1166C3.90078 28.5 3.35078 28.65 2.86745 28.4667C2.38412 28.2833 2.05078 27.8166 2.05078 27.3V20C2.05078 14.8666 5.21745 11.15 10.1341 10.5333C10.5841 10.4666 11.1008 10.4166 11.6341 10.4166H28.3008C28.7008 10.4166 29.2174 10.4333 29.7508 10.5166C34.6674 11.0833 37.8841 14.8166 37.8841 20V28.3333C37.9175 34.0666 34.0675 37.9166 28.3341 37.9166ZM15.3008 35.4166H28.3341C32.6341 35.4166 35.4174 32.6333 35.4174 28.3333V20C35.4174 16.1 33.1341 13.4166 29.4341 12.9833C29.0341 12.9166 28.6841 12.9166 28.3341 12.9166H11.6674C11.2674 12.9166 10.8841 12.9499 10.5008 12.9999C6.83411 13.4666 4.58412 16.1333 4.58412 20V24.7C5.71745 24.0833 7.01745 23.75 8.33412 23.75C12.7008 23.75 16.2508 27.3 16.2508 31.6666C16.2508 32.9833 15.9174 34.2833 15.3008 35.4166Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M36.6673 28.75H31.6673C29.134 28.75 27.084 26.7 27.084 24.1667C27.084 21.6334 29.134 19.5834 31.6673 19.5834H36.6673C37.3507 19.5834 37.9173 20.15 37.9173 20.8334C37.9173 21.5167 37.3507 22.0834 36.6673 22.0834H31.6673C30.5173 22.0834 29.584 23.0167 29.584 24.1667C29.584 25.3167 30.5173 26.25 31.6673 26.25H36.6673C37.3507 26.25 37.9173 26.8167 37.9173 27.5C37.9173 28.1834 37.3507 28.75 36.6673 28.75Z"
+                fill="#104E9E"
+              />
+            </svg>
+            <div class="checkout__advantages-info">
+              Безопасная оплата
+              <p class="checkout__advantages-descr">
+                Ваши надежные данные надержно защищены
+              </p>
+            </div>
+          </li>
+          <li class="checkout__advantages-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M19.9996 22.1666C19.7829 22.1666 19.5662 22.1167 19.3662 22L4.64959 13.4834C4.04959 13.1334 3.84956 12.3667 4.19956 11.7667C4.54956 11.1667 5.29956 10.9666 5.91622 11.3166L19.9996 19.4666L33.9996 11.3667C34.5996 11.0167 35.3662 11.2334 35.7162 11.8167C36.0662 12.4167 35.8496 13.1833 35.2663 13.5333L20.6496 22C20.4329 22.1 20.2162 22.1666 19.9996 22.1666Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M20 37.2667C19.3167 37.2667 18.75 36.7 18.75 36.0167V20.9C18.75 20.2167 19.3167 19.65 20 19.65C20.6833 19.65 21.25 20.2167 21.25 20.9V36.0167C21.25 36.7 20.6833 37.2667 20 37.2667Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M20.0001 37.9167C18.5335 37.9167 17.0668 37.6 15.9335 36.95L7.03346 32.0167C4.61679 30.6834 2.7168 27.4667 2.7168 24.7V15.2666C2.7168 12.4999 4.61679 9.30002 7.03346 7.95002L15.9335 3.01665C18.2001 1.74998 21.7668 1.74998 24.0501 3.01665L32.9501 7.95002C35.3668 9.28335 37.2668 12.4999 37.2668 15.2666V24.7C37.2668 24.8167 37.2668 24.9833 37.2168 25.2C37.1168 25.6333 36.8001 25.9833 36.3834 26.1166C35.9668 26.25 35.5001 26.1667 35.1668 25.8667C33.2668 24.2 30.3001 24.1333 28.2668 25.75C26.9834 26.7667 26.2334 28.3166 26.2334 29.9666C26.2334 30.95 26.5001 31.9167 27.0168 32.75C27.1501 32.9834 27.2834 33.1667 27.4334 33.3333C27.6834 33.6167 27.7835 34 27.7168 34.3666C27.6501 34.7333 27.4168 35.0667 27.0835 35.2333L24.0335 36.9167C22.9168 37.6 21.4668 37.9167 20.0001 37.9167ZM20.0001 4.58332C18.9668 4.58332 17.9168 4.8 17.1668 5.21666L8.26677 10.15C6.65011 11.05 5.25011 13.4333 5.25011 15.2666V24.7C5.25011 26.5333 6.66677 28.9333 8.26677 29.8167L17.1668 34.7499C18.6834 35.5999 21.3334 35.5999 22.8501 34.7499L24.7168 33.7166C24.1001 32.6 23.7668 31.3 23.7668 29.9666C23.7668 27.5333 24.8501 25.2834 26.7335 23.7834C29.0168 21.9667 32.2501 21.5833 34.7834 22.6833V15.25C34.7834 13.4167 33.3668 11.0167 31.7668 10.1333L22.8668 5.19998C22.0835 4.79998 21.0335 4.58332 20.0001 4.58332Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M31.6667 37.9167C27.3 37.9167 23.75 34.3667 23.75 30C23.75 27.5667 24.8333 25.3167 26.7167 23.8167C28.1167 22.7 29.8833 22.0834 31.6667 22.0834C36.0333 22.0834 39.5833 25.6334 39.5833 30C39.5833 32.2667 38.6 34.4334 36.8833 35.9334C35.4333 37.2167 33.5833 37.9167 31.6667 37.9167ZM31.6667 24.5834C30.4333 24.5834 29.2667 25 28.2833 25.7833C27 26.8 26.25 28.35 26.25 30C26.25 32.9834 28.6833 35.4167 31.6667 35.4167C32.9667 35.4167 34.2333 34.9334 35.25 34.0667C36.4167 33.0334 37.0833 31.5667 37.0833 30C37.0833 27.0167 34.65 24.5834 31.6667 24.5834Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M29.9992 32.9166C29.5825 32.9166 29.1658 32.7 28.9325 32.3167C28.5825 31.7167 28.7658 30.9499 29.3658 30.5999L30.8492 29.7167V27.9166C30.8492 27.2333 31.4159 26.6666 32.0992 26.6666C32.7825 26.6666 33.3492 27.2333 33.3492 27.9166V30.4166C33.3492 30.85 33.1158 31.2667 32.7492 31.4833L30.6658 32.7333C30.4325 32.8667 30.2158 32.9166 29.9992 32.9166Z"
+                fill="#104E9E"
+              />
+            </svg>
+            <div class="checkout__advantages-info">
+              Доставка по России
+              <p class="checkout__advantages-descr">
+                Осуществляетм доставку в любой регион
+              </p>
+            </div>
+          </li>
+          <li class="checkout__advantages-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M36.6673 20C36.6673 29.2 29.2007 36.6667 20.0007 36.6667C10.8007 36.6667 5.18398 27.4 5.18398 27.4M5.18398 35.7334V27.4H12.7173M3.33398 20C3.33398 10.8 10.734 3.33337 20.0007 3.33337C31.1173 3.33337 36.6673 12.6 36.6673 12.6M29.2673 12.6H36.6673V4.26671"
+                stroke="#104E9E"
+                stroke-width="2.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="checkout__advantages-info">
+              Возврат и обмен
+              <p class="checkout__advantages-descr">
+                Возврат товара в течении 14 дней согласно закону РФ
+              </p>
+            </div>
+          </li>
+          <li class="checkout__advantages-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M20 37.9166C18.8333 37.9166 17.65 37.4666 16.7667 36.5833L13.9166 33.7666C13.2166 33.0666 12.25 32.6833 11.2667 32.6833H10C6.55 32.6833 3.75 29.9 3.75 26.4833V8.29993C3.75 4.88326 6.55 2.09998 10 2.09998H30C33.45 2.09998 36.25 4.88326 36.25 8.29993V26.4833C36.25 29.9 33.45 32.6833 30 32.6833H28.7333C27.75 32.6833 26.7834 33.0833 26.0834 33.7666L23.2333 36.5833C22.35 37.4666 21.1667 37.9166 20 37.9166ZM10 4.58329C7.93333 4.58329 6.25 6.24991 6.25 8.28324V26.4666C6.25 28.5166 7.93333 30.1666 10 30.1666H11.2667C12.9167 30.1666 14.5166 30.8333 15.6833 31.9833L18.5333 34.8C19.35 35.6 20.6667 35.6 21.4834 34.8L24.3333 31.9833C25.5 30.8333 27.1 30.1666 28.75 30.1666H30C32.0667 30.1666 33.75 28.5 33.75 26.4666V8.28324C33.75 6.23324 32.0667 4.58329 30 4.58329H10Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M20.0005 17.9168C17.1672 17.9168 14.8672 15.6167 14.8672 12.7834C14.8672 9.95007 17.1672 7.65015 20.0005 7.65015C22.8339 7.65015 25.1339 9.95007 25.1339 12.7834C25.1339 15.6167 22.8339 17.9168 20.0005 17.9168ZM20.0005 10.1501C18.5505 10.1501 17.3672 11.3334 17.3672 12.7834C17.3672 14.2334 18.5505 15.4168 20.0005 15.4168C21.4505 15.4168 22.6339 14.2334 22.6339 12.7834C22.6339 11.3334 21.4505 10.1501 20.0005 10.1501Z"
+                fill="#104E9E"
+              />
+              <path
+                d="M26.6673 27.3501C25.984 27.3501 25.4173 26.7835 25.4173 26.1001C25.4173 23.8001 22.984 21.9169 20.0007 21.9169C17.0173 21.9169 14.584 23.8001 14.584 26.1001C14.584 26.7835 14.0173 27.3501 13.334 27.3501C12.6507 27.3501 12.084 26.7835 12.084 26.1001C12.084 22.4168 15.634 19.4169 20.0007 19.4169C24.3673 19.4169 27.9173 22.4168 27.9173 26.1001C27.9173 26.7835 27.3507 27.3501 26.6673 27.3501Z"
+                fill="#104E9E"
+              />
+            </svg>
+            <div class="checkout__advantages-info">
+              Поддержка клиентов
+              <p class="checkout__advantages-descr">
+                Наши специалисты всегда готовы помочь вам
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</section>

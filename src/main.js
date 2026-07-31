@@ -1,5 +1,7 @@
 import './main.css'
 import './assets/components/cart-fly/cart-fly.js'
+import './assets/components/cart/cart.js'
+import './assets/components/checkout/checkout.js'
 import './assets/components/catalog/catalog.js'
 import './assets/components/header/header.js'
 import './assets/components/footer/footer.js'

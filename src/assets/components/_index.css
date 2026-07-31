@@ -1,5 +1,7 @@
 @import url('./breadcrumbs/breadcrumbs.css');
 @import url('./cart-fly/cart-fly.css');
+@import url('./cart/cart.css');
+@import url('./checkout/checkout.css');
 @import url('./catalog/catalog.css');
 @import url('./category/category.css');
 @import url('./header/header.css');

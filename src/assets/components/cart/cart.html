@@ -1,0 +1,456 @@
+<section class="cart">
+  <div class="container container--cart">
+    <h1 class="cart__title">Корзина</h1>
+    <div class="cart__inner">
+      <div class="cart__products">
+        <table class="cart__products-table">
+          <colgroup>
+            <col class="cart__products-col cart__products-col--product" />
+            <col class="cart__products-col cart__products-col--props" />
+            <col class="cart__products-col cart__products-col--price" />
+            <col class="cart__products-col cart__products-col--quantity" />
+            <col class="cart__products-col cart__products-col--actions" />
+          </colgroup>
+          <thead class="cart__products-head">
+            <tr class="cart__products-row">
+              <th class="cart__products-cell cart__products-cell--product">
+                Товар
+              </th>
+              <th class="cart__products-cell cart__products-cell--props">
+                Характеристики
+              </th>
+              <th class="cart__products-cell cart__products-cell--price">
+                Цена
+              </th>
+              <th class="cart__products-cell cart__products-cell--quantity">
+                Количество
+              </th>
+              <th class="cart__products-cell cart__products-cell--actions"></th>
+            </tr>
+          </thead>
+          <tbody class="cart__products-body">
+            <tr class="cart__products-row">
+              <td class="cart__products-cell cart__products-cell--product">
+                <div class="cart__product">
+                  <img
+                    class="cart__product-img"
+                    width="50"
+                    height="50"
+                    alt=""
+                    src="/img/product.jpg"
+                  />
+                  <div class="cart__product-info">
+                    <a class="cart__product-title" href="/product-page.html">
+                      Гидростанции серии 1<br />
+                      (электродвигатель от 0,75 до 5,5 кВт)
+                    </a>
+                    <span class="cart__product-article">
+                      Артикул: 83273223
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--props">
+                <dl class="cart__props">
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Размер:</dt>
+                    <dd class="cart__props-value">200 кг</dd>
+                  </div>
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Цвет:</dt>
+                    <dd class="cart__props-value">Черный</dd>
+                  </div>
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Производительность:</dt>
+                    <dd class="cart__props-value">1 + 30 л/мин</dd>
+                  </div>
+                </dl>
+              </td>
+              <td class="cart__products-cell cart__products-cell--price">
+                <div class="cart__price">
+                  <div class="cart__price-top">
+                    <span class="cart__price-current">14 367 ₽</span>
+                    <span class="cart__price-old">16 900 ₽</span>
+                  </div>
+                  <span class="cart__price-sale">- 15 %</span>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--quantity">
+                <div class="cart__quantity">
+                  <button class="cart__quantity-btn" type="button">−</button>
+                  <span class="cart__quantity-value">1</span>
+                  <button class="cart__quantity-btn" type="button">+</button>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--actions">
+                <div class="cart__actions">
+                  <button
+                    class="cart__action"
+                    type="button"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.69C2 5.6 4.49 3.1 7.56 3.1C9.38 3.1 10.99 3.98 12 5.34C13.01 3.98 14.63 3.1 16.44 3.1C19.51 3.1 22 5.6 22 8.69C22 15.69 15.52 19.82 12.62 20.81Z"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="cart__action"
+                    type="button"
+                    aria-label="Удалить товар"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M21 5.98C17.67 5.65 14.32 5.48 10.98 5.48C9 5.48 7.02 5.58 5.04 5.78L3 5.98"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.85 9.14L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79C6 22 5.91 20.78 5.8 19.21L5.15 9.14"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.33 16.5H13.66"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.5 12.5H14.5"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="cart__products-row">
+              <td class="cart__products-cell cart__products-cell--product">
+                <div class="cart__product">
+                  <img
+                    class="cart__product-img"
+                    width="50"
+                    height="50"
+                    alt=""
+                    src="/img/product.jpg"
+                  />
+                  <div class="cart__product-info">
+                    <a class="cart__product-title" href="/product-page.html">
+                      Гидростанции серии 1<br />
+                      (электродвигатель от 0,75 до 5,5 кВт)
+                    </a>
+                    <span class="cart__product-article">
+                      Артикул: 83273223
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--props">
+                <dl class="cart__props">
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Размер:</dt>
+                    <dd class="cart__props-value">200 кг</dd>
+                  </div>
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Цвет:</dt>
+                    <dd class="cart__props-value">Черный</dd>
+                  </div>
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Производительность:</dt>
+                    <dd class="cart__props-value">1 + 30 л/мин</dd>
+                  </div>
+                </dl>
+              </td>
+              <td class="cart__products-cell cart__products-cell--price">
+                <div class="cart__price">
+                  <div class="cart__price-top">
+                    <span class="cart__price-current">14 367 ₽</span>
+                    <span class="cart__price-old">16 900 ₽</span>
+                  </div>
+                  <span class="cart__price-sale">- 15 %</span>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--quantity">
+                <div class="cart__quantity">
+                  <button class="cart__quantity-btn" type="button">−</button>
+                  <span class="cart__quantity-value">1</span>
+                  <button class="cart__quantity-btn" type="button">+</button>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--actions">
+                <div class="cart__actions">
+                  <button
+                    class="cart__action"
+                    type="button"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.69C2 5.6 4.49 3.1 7.56 3.1C9.38 3.1 10.99 3.98 12 5.34C13.01 3.98 14.63 3.1 16.44 3.1C19.51 3.1 22 5.6 22 8.69C22 15.69 15.52 19.82 12.62 20.81Z"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="cart__action"
+                    type="button"
+                    aria-label="Удалить товар"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M21 5.98C17.67 5.65 14.32 5.48 10.98 5.48C9 5.48 7.02 5.58 5.04 5.78L3 5.98"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.85 9.14L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79C6 22 5.91 20.78 5.8 19.21L5.15 9.14"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.33 16.5H13.66"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.5 12.5H14.5"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="cart__products-row">
+              <td class="cart__products-cell cart__products-cell--product">
+                <div class="cart__product">
+                  <img
+                    class="cart__product-img"
+                    width="50"
+                    height="50"
+                    alt=""
+                    src="/img/product.jpg"
+                  />
+                  <div class="cart__product-info">
+                    <a class="cart__product-title" href="/product-page.html">
+                      Гидростанции серии 1<br />
+                      (электродвигатель от 0,75 до 5,5 кВт)
+                    </a>
+                    <span class="cart__product-article">
+                      Артикул: 83273223
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--props">
+                <dl class="cart__props">
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Размер:</dt>
+                    <dd class="cart__props-value">200 кг</dd>
+                  </div>
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Цвет:</dt>
+                    <dd class="cart__props-value">Черный</dd>
+                  </div>
+                  <div class="cart__props-item">
+                    <dt class="cart__props-label">Производительность:</dt>
+                    <dd class="cart__props-value">1 + 30 л/мин</dd>
+                  </div>
+                </dl>
+              </td>
+              <td class="cart__products-cell cart__products-cell--price">
+                <div class="cart__price">
+                  <div class="cart__price-top">
+                    <span class="cart__price-current">14 367 ₽</span>
+                    <span class="cart__price-old">16 900 ₽</span>
+                  </div>
+                  <span class="cart__price-sale">- 15 %</span>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--quantity">
+                <div class="cart__quantity">
+                  <button class="cart__quantity-btn" type="button">−</button>
+                  <span class="cart__quantity-value">1</span>
+                  <button class="cart__quantity-btn" type="button">+</button>
+                </div>
+              </td>
+              <td class="cart__products-cell cart__products-cell--actions">
+                <div class="cart__actions">
+                  <button
+                    class="cart__action"
+                    type="button"
+                    aria-label="Добавить в избранное"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.69C2 5.6 4.49 3.1 7.56 3.1C9.38 3.1 10.99 3.98 12 5.34C13.01 3.98 14.63 3.1 16.44 3.1C19.51 3.1 22 5.6 22 8.69C22 15.69 15.52 19.82 12.62 20.81Z"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="cart__action"
+                    type="button"
+                    aria-label="Удалить товар"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M21 5.98C17.67 5.65 14.32 5.48 10.98 5.48C9 5.48 7.02 5.58 5.04 5.78L3 5.98"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.85 9.14L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79C6 22 5.91 20.78 5.8 19.21L5.15 9.14"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.33 16.5H13.66"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.5 12.5H14.5"
+                        stroke="#888888"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cart__footer">
+        <a href="catalog.html" class="cart__catalog">Продолжить покупки</a>
+        <div class="cart__info">
+          <h2 class="cart__info-title">Ваш заказ</h2>
+          <span class="cart__info-line"></span>
+          <ul class="cart__total">
+            <li class="cart__total-item">
+              Товаров на сумму:
+              <span class="cart__total-volue">824 367 ₽</span>
+            </li>
+            <li class="cart__total-item">
+              Скидка:
+              <span class="cart__total-volue cart__total-volue--red">- 3 367 ₽</span>
+            </li>
+            <li class="cart__total-item">
+              Доставка:
+              <span class="cart__total-volue">1 367 ₽</span>
+            </li>
+            <li class="cart__total-item">
+              Налог:
+              <span class="cart__total-volue">867 ₽</span>
+            </li>
+          </ul>
+          <span class="cart__info-line"></span>
+          <div class="cart__info-footer">
+            Итого:
+            <span class="cart__info-price">
+              825 367 ₽
+            </span>
+            <a class="cart__info-btn" href="checkout.html">
+              Оформить заказ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
