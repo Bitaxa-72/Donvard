@@ -1,169 +1,859 @@
 <section class="catalog catalog--category">
-  <div class="container container-catalog">
-    <h1 class="catalog__title">Гидростанции</h1>
-    <div class="catalog__wrapper">
-      <ul class="catalog__categorys">
-        <li class="catalog__category">
-          <a class="catalog__link" href="category.html"
-            >Гидростанции</a
-          >
-        </li>
-        <li class="catalog__category">
-          <a class="catalog__link" href="category.html"
-            >Гидроцилиндры</a
-          >
-        </li>
-        <li class="catalog__category">
-          <a class="catalog__link" href="category.html"
-            >Электрические шкафы</a
-          >
-        </li>
-        <li
-          class="catalog__category catalog__category--parent"
-        >
-          <div class="catalog__category-heading">
-            <a class="catalog__link" href="category.html"
-              >Подъемные столы</a
-            >
+  <div class="container">
+    <div class="category__top">
+      <h1 class="catalog__title category__title">Гидростанции</h1>
+      <div class="category__buttons-wrap">
+        <div class="category__select-sort">
+          Сортировать по
+          <div class="category__sort" data-category-sort>
+            <input
+              class="category__sort-input"
+              type="hidden"
+              name="category-sort"
+              value="popular"
+            />
             <button
-              class="catalog__category-toggle"
+              class="category__sort-toggle"
               type="button"
-              aria-label="Раскрыть подразделы «Подъемные столы»"
               aria-expanded="false"
+              data-category-sort-toggle
             >
+              <span class="category__sort-value" data-category-sort-value>
+                По популярности
+              </span>
               <img
-                class="catalog__category-arrow"
+                class="category__sort-arrow"
                 width="13"
                 height="7"
                 alt=""
-                src="/img/arrow-catalog.svg"
+                src="/img/category-sort-arrow.svg"
               />
             </button>
+            <ul class="category__sort-list" data-category-sort-list hidden>
+              <li class="category__sort-item">
+                <button
+                  class="category__sort-option category__sort-option--active"
+                  type="button"
+                  data-category-sort-option
+                  data-value="popular"
+                >
+                  По популярности
+                </button>
+              </li>
+              <li class="category__sort-item">
+                <button
+                  class="category__sort-option"
+                  type="button"
+                  data-category-sort-option
+                  data-value="price-up"
+                >
+                  Сначала дешевле
+                </button>
+              </li>
+              <li class="category__sort-item">
+                <button
+                  class="category__sort-option"
+                  type="button"
+                  data-category-sort-option
+                  data-value="price-down"
+                >
+                  Сначала дороже
+                </button>
+              </li>
+              <li class="category__sort-item">
+                <button
+                  class="category__sort-option"
+                  type="button"
+                  data-category-sort-option
+                  data-value="new"
+                >
+                  Сначала новые
+                </button>
+              </li>
+            </ul>
           </div>
-          <ul class="catalog__subcategories">
-            <li class="catalog__subcategory">
-              <a
-                class="catalog__subcategory-link"
-                href="category.html"
-                >Подъемный стол №1</a
+        </div>
+        <button
+          class="category__view-btn category__view-btn--sections category__view-btn--active"
+          type="button"
+          data-category-subview="sections"
+          aria-pressed="true"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+          >
+            <path
+              d="M4.375 6.71875H3.125C1.6125 6.71875 0.78125 5.8875 0.78125 4.375V3.125C0.78125 1.6125 1.6125 0.78125 3.125 0.78125H4.375C5.8875 0.78125 6.71875 1.6125 6.71875 3.125V4.375C6.71875 5.8875 5.8875 6.71875 4.375 6.71875ZM3.125 1.71875C2.1375 1.71875 1.71875 2.1375 1.71875 3.125V4.375C1.71875 5.3625 2.1375 5.78125 3.125 5.78125H4.375C5.3625 5.78125 5.78125 5.3625 5.78125 4.375V3.125C5.78125 2.1375 5.3625 1.71875 4.375 1.71875H3.125Z"
+              fill="currentColor"
+            />
+            <path
+              d="M11.875 6.71875H10.625C9.1125 6.71875 8.28125 5.8875 8.28125 4.375V3.125C8.28125 1.6125 9.1125 0.78125 10.625 0.78125H11.875C13.3875 0.78125 14.2188 1.6125 14.2188 3.125V4.375C14.2188 5.8875 13.3875 6.71875 11.875 6.71875ZM10.625 1.71875C9.6375 1.71875 9.21875 2.1375 9.21875 3.125V4.375C9.21875 5.3625 9.6375 5.78125 10.625 5.78125H11.875C12.8625 5.78125 13.2812 5.3625 13.2812 4.375V3.125C13.2812 2.1375 12.8625 1.71875 11.875 1.71875H10.625Z"
+              fill="currentColor"
+            />
+            <path
+              d="M11.875 14.2188H10.625C9.1125 14.2188 8.28125 13.3875 8.28125 11.875V10.625C8.28125 9.1125 9.1125 8.28125 10.625 8.28125H11.875C13.3875 8.28125 14.2188 9.1125 14.2188 10.625V11.875C14.2188 13.3875 13.3875 14.2188 11.875 14.2188ZM10.625 9.21875C9.6375 9.21875 9.21875 9.6375 9.21875 10.625V11.875C9.21875 12.8625 9.6375 13.2812 10.625 13.2812H11.875C12.8625 13.2812 13.2812 12.8625 13.2812 11.875V10.625C13.2812 9.6375 12.8625 9.21875 11.875 9.21875H10.625Z"
+              fill="currentColor"
+            />
+            <path
+              d="M4.375 14.2188H3.125C1.6125 14.2188 0.78125 13.3875 0.78125 11.875V10.625C0.78125 9.1125 1.6125 8.28125 3.125 8.28125H4.375C5.8875 8.28125 6.71875 9.1125 6.71875 10.625V11.875C6.71875 13.3875 5.8875 14.2188 4.375 14.2188ZM3.125 9.21875C2.1375 9.21875 1.71875 9.6375 1.71875 10.625V11.875C1.71875 12.8625 2.1375 13.2812 3.125 13.2812H4.375C5.3625 13.2812 5.78125 12.8625 5.78125 11.875V10.625C5.78125 9.6375 5.3625 9.21875 4.375 9.21875H3.125Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <button
+          class="category__view-btn category__view-btn--cards"
+          type="button"
+          data-category-subview="cards"
+          aria-pressed="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+          >
+            <path
+              d="M6.2998 0.930786H9.3252C11.1017 0.930786 12.4332 1.41767 13.3203 2.30481C14.2075 3.19195 14.6943 4.52344 14.6943 6.29993V9.32532C14.6943 11.1018 14.2075 12.4333 13.3203 13.3204C12.4332 14.2076 11.1017 14.6945 9.3252 14.6945H6.2998C4.52332 14.6945 3.19183 14.2076 2.30469 13.3204C1.41754 12.4333 0.930664 11.1018 0.930664 9.32532V6.29993C0.930664 4.52344 1.41754 3.19195 2.30469 2.30481C3.19183 1.41766 4.52332 0.930786 6.2998 0.930786ZM6.2998 2.58899C5.0699 2.58899 4.12012 2.84875 3.48438 3.4845C2.84863 4.12024 2.58887 5.07002 2.58887 6.29993V9.32532C2.58887 10.5552 2.84863 11.505 3.48438 12.1407C4.12012 12.7765 5.0699 13.0363 6.2998 13.0363H9.3252C10.5551 13.0363 11.5049 12.7765 12.1406 12.1407C12.7764 11.505 13.0361 10.5552 13.0361 9.32532V6.29993C13.0361 5.07002 12.7764 4.12024 12.1406 3.4845C11.5049 2.84875 10.5551 2.58899 9.3252 2.58899H6.2998Z"
+              fill="currentColor"
+              stroke="white"
+              stroke-width="0.611111"
+            />
+          </svg>
+        </button>
+        <span class="category__top-line"></span>
+        <button
+          class="category__view-btn category__view-btn--grid category__view-btn--active"
+          type="button"
+          data-category-view="grid"
+          aria-pressed="true"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7 8C7.55228 8 8 7.55228 8 7C8 6.44772 7.55228 6 7 6C6.44772 6 6 6.44772 6 7C6 7.55228 6.44772 8 7 8Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 8C12.5523 8 13 7.55228 13 7C13 6.44772 12.5523 6 12 6C11.4477 6 11 6.44772 11 7C11 7.55228 11.4477 8 12 8Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17 8C17.5523 8 18 7.55228 18 7C18 6.44772 17.5523 6 17 6C16.4477 6 16 6.44772 16 7C16 7.55228 16.4477 8 17 8Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7 13C7.55228 13 8 12.5523 8 12C8 11.4477 7.55228 11 7 11C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17 13C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11C16.4477 11 16 11.4477 16 12C16 12.5523 16.4477 13 17 13Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7 18C7.55228 18 8 17.5523 8 17C8 16.4477 7.55228 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17 18C17.5523 18 18 17.5523 18 17C18 16.4477 17.5523 16 17 16C16.4477 16 16 16.4477 16 17C16 17.5523 16.4477 18 17 18Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <button
+          class="category__view-btn category__view-btn--list-dots"
+          type="button"
+          data-category-view="list-dots"
+          aria-pressed="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M10 6.5H18C18.2761 6.5 18.5 6.72386 18.5 7C18.5 7.27614 18.2761 7.5 18 7.5H10C9.72386 7.5 9.5 7.27614 9.5 7C9.5 6.72386 9.72386 6.5 10 6.5Z"
+              fill="currentColor"
+            />
+            <path
+              d="M10 11.5H18C18.2761 11.5 18.5 11.7239 18.5 12C18.5 12.2761 18.2761 12.5 18 12.5H10C9.72386 12.5 9.5 12.2761 9.5 12C9.5 11.7239 9.72386 11.5 10 11.5Z"
+              fill="currentColor"
+            />
+            <path
+              d="M10 16.5H18C18.2761 16.5 18.5 16.7239 18.5 17C18.5 17.2761 18.2761 17.5 18 17.5H10C9.72386 17.5 9.5 17.2761 9.5 17C9.5 16.7239 9.72386 16.5 10 16.5Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6 8C6.55228 8 7 7.55228 7 7C7 6.44772 6.55228 6 6 6C5.44772 6 5 6.44772 5 7C5 7.55228 5.44772 8 6 8Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6 13C6.55228 13 7 12.5523 7 12C7 11.4477 6.55228 11 6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13Z"
+              fill="currentColor"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6 18C6.55228 18 7 17.5523 7 17C7 16.4477 6.55228 16 6 16C5.44772 16 5 16.4477 5 17C5 17.5523 5.44772 18 6 18Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <button
+          class="category__view-btn category__view-btn--list"
+          type="button"
+          data-category-view="list"
+          aria-pressed="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M6 6.5H18C18.2761 6.5 18.5 6.72386 18.5 7C18.5 7.27614 18.2761 7.5 18 7.5H6C5.72386 7.5 5.5 7.27614 5.5 7C5.5 6.72386 5.72386 6.5 6 6.5Z"
+              fill="currentColor"
+            />
+            <path
+              d="M6 11.5H18C18.2761 11.5 18.5 11.7239 18.5 12C18.5 12.2761 18.2761 12.5 18 12.5H6C5.72386 12.5 5.5 12.2761 5.5 12C5.5 11.7239 5.72386 11.5 6 11.5Z"
+              fill="currentColor"
+            />
+            <path
+              d="M6 16.5H18C18.2761 16.5 18.5 16.7239 18.5 17C18.5 17.2761 18.2761 17.5 18 17.5H6C5.72386 17.5 5.5 17.2761 5.5 17C5.5 16.7239 5.72386 16.5 6 16.5Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="category__swiper">
+      <button
+        class="category__swiper-arrow category__swiper-arrow--prev"
+        type="button"
+        aria-label="Предыдущая категория"
+      >
+        <svg
+          class="category__swiper-arrow-img"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="12"
+          viewBox="0 0 20 12"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.1956 0.299292C13.5826 -0.0947342 14.2158 -0.100438 14.6098 0.286552L19.7007 5.28655C19.8922 5.47458 20 5.73166 20 6C20 6.26834 19.8922 6.52542 19.7007 6.71345L14.6098 11.7134C14.2158 12.1004 13.5826 12.0947 13.1956 11.7007C12.8087 11.3067 12.8144 10.6735 13.2084 10.2866L16.5547 7L1 7C0.447715 7 0 6.55229 0 6C0 5.44772 0.447715 5 1 5L16.5547 5L13.2084 1.71345C12.8144 1.32646 12.8087 0.693319 13.1956 0.299292Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+      <div class="category__slider swiper">
+        <div class="category__slider-wrapper swiper-wrapper">
+          <div class="category__slide swiper-slide">
+            <button
+              class="category__slide-btn category__slide-btn--active"
+              type="button"
+            >
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-hydrostations.png"
+              />
+              <span class="category__slide-title">Гидростанции</span>
+            </button>
+          </div>
+          <div class="category__slide swiper-slide">
+            <button class="category__slide-btn" type="button">
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-electric-cabinets.png"
+              />
+              <span class="category__slide-title">Электрические шкафы</span>
+            </button>
+          </div>
+          <div class="category__slide swiper-slide">
+            <button class="category__slide-btn" type="button">
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-cylinders.png"
+              />
+              <span class="category__slide-title">Гидроцилиндры</span>
+            </button>
+          </div>
+          <div class="category__slide swiper-slide">
+            <button class="category__slide-btn" type="button">
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-lift-tables.png"
+              />
+              <span class="category__slide-title">Подъемные столы</span>
+            </button>
+          </div>
+          <div class="category__slide swiper-slide">
+            <button class="category__slide-btn" type="button">
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-supports.png"
+              />
+              <span class="category__slide-title">Опоры</span>
+            </button>
+          </div>
+          <div class="category__slide swiper-slide">
+            <button class="category__slide-btn" type="button">
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-cylinders.png"
+              />
+              <span class="category__slide-title"
+                >Поршневые гидроаккумуляторы</span
               >
+            </button>
+          </div>
+          <div class="category__slide swiper-slide">
+            <button class="category__slide-btn" type="button">
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-hydrostations.png"
+              />
+              <span class="category__slide-title">РВД</span>
+            </button>
+          </div>
+          <div class="category__slide swiper-slide">
+            <button class="category__slide-btn" type="button">
+              <img
+                class="category__slide-img"
+                width="48"
+                height="45"
+                alt=""
+                src="/img/category-slider-electric-cabinets.png"
+              />
+              <span class="category__slide-title">Стенды испытаний</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="category__swiper-arrow category__swiper-arrow--next"
+        type="button"
+        aria-label="Следующая категория"
+      >
+        <svg
+          class="category__swiper-arrow-img"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="12"
+          viewBox="0 0 20 12"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.1956 0.299292C13.5826 -0.0947342 14.2158 -0.100438 14.6098 0.286552L19.7007 5.28655C19.8922 5.47458 20 5.73166 20 6C20 6.26834 19.8922 6.52542 19.7007 6.71345L14.6098 11.7134C14.2158 12.1004 13.5826 12.0947 13.1956 11.7007C12.8087 11.3067 12.8144 10.6735 13.2084 10.2866L16.5547 7L1 7C0.447715 7 0 6.55229 0 6C0 5.44772 0.447715 5 1 5L16.5547 5L13.2084 1.71345C12.8144 1.32646 12.8087 0.693319 13.1956 0.299292Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="catalog__wrapper catalog__wrapper--category">
+      <div class="catalog__statFilter">
+        <fieldset class="catalog__filter">
+          <legend class="catalog__filter-title">По цене</legend>
+          <div class="catalog__filter-price">
+            <label class="catalog__filter-price-field">
+              <input
+                class="catalog__filter-price-input"
+                type="number"
+                name="price-from"
+                placeholder="От 327 323 ₽"
+                inputmode="numeric"
+                min="0"
+              />
+            </label>
+            <label class="catalog__filter-price-field">
+              <input
+                class="catalog__filter-price-input"
+                type="number"
+                name="price-to"
+                placeholder="До 327 323 ₽"
+                inputmode="numeric"
+                min="0"
+              />
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="catalog__filter">
+          <legend class="catalog__filter-title">Тип управления</legend>
+          <ul class="catalog__filter-list">
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Ручное</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="manual"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
             </li>
-            <li class="catalog__subcategory">
-              <a
-                class="catalog__subcategory-link"
-                href="category.html"
-                >Подъемный стол №2</a
-              >
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Электромагнитное</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="electromagnetic"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Пропорциональное</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="proportional"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">С ЧПУ</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="cnc"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Автоматическое</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="automatic"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Гидравлическое</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="hydraulic"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Пневматическое</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="pneumatic"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Комбинированное</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="combined"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Дистанционное</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="remote"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Сенсорное</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="control-type"
+                  value="sensor"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
             </li>
           </ul>
-        </li>
-        <li class="catalog__category">
-          <a class="catalog__link" href="category.html"
-            >Опоры</a
-          >
-        </li>
-        <li class="catalog__category">
-          <a class="catalog__link" href="category.html"
-            >Поршневые гидроаккумуляторы</a
-          >
-        </li>
-        <li
-          class="catalog__category catalog__category--parent"
-        >
-          <div class="catalog__category-heading">
-            <a class="catalog__link" href="category.html"
-              >РВД</a
-            >
-            <button
-              class="catalog__category-toggle"
-              type="button"
-              aria-label="Раскрыть подразделы «РВД»"
-              aria-expanded="false"
-            >
-              <img
-                class="catalog__category-arrow"
-                width="13"
-                height="7"
-                alt=""
-                src="/img/arrow-catalog.svg"
-              />
-            </button>
-          </div>
-          <ul class="catalog__subcategories"></ul>
-        </li>
-        <li class="catalog__category">
-          <a class="catalog__link" href="category.html"
-            >Стенды испытаний</a
-          >
-        </li>
-      </ul>
-      <div class="catalog__output">
+        </fieldset>
+        <fieldset class="catalog__filter">
+          <legend class="catalog__filter-title">Серия</legend>
+          <ul class="catalog__filter-list">
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Серия 1</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="series-1"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Серия 2</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="series-2"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Серия 3</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="series-3"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Серия 4</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="series-4"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Серия 5</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="series-5"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Серия 6</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="series-6"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Компактные</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="compact"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Промышленные</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="industrial"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Мобильные</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="mobile"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Стационарные</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="stationary"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Низкошумные</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="low-noise"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">Высоконапорные</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="series"
+                  value="high-pressure"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="catalog__filter">
+          <legend class="catalog__filter-title">Мощность, кВт</legend>
+          <ul class="catalog__filter-list">
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">до 0,75 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="to-0-75"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">0,75–2,2 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="0-75-2-2"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">2,2–5,5 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="2-2-5-5"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">5,5–11 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="5-5-11"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">11–15 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="11-15"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">15–22 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="15-22"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">22–30 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="22-30"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">свыше 30 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="from-30"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">30–45 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="30-45"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="catalog__filter-item">
+              <label class="catalog__filter-label">
+                <span class="catalog__filter-text">45–75 кВт</span>
+                <input
+                  class="catalog__filter-checkbox"
+                  type="checkbox"
+                  name="power"
+                  value="45-75"
+                />
+                <span class="catalog__filter-check" aria-hidden="true"></span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="catalog__filter-btn" type="button">Сбросить</button>
+      </div>
+      <div class="category__controls-slot"></div>
+      <div class="category__products-views">
         <div
-          class="catalog__tubs"
-          role="group"
-          aria-label="Режим просмотра"
+          class="catalog__products category__products-view category__products-view--sections"
+          data-category-products-view="sections"
         >
-          <span class="catalog__tubs-label"
-            >Режим просмотра</span
-          >
-          <button
-            class="catalog__tubs-btn"
-            type="button"
-            aria-pressed="false"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              class="catalog__tubs-img"
-            >
-              <path
-                d="M5.83329 8.95835H4.16663C2.14996 8.95835 1.04163 7.85002 1.04163 5.83335V4.16669C1.04163 2.15002 2.14996 1.04169 4.16663 1.04169H5.83329C7.84996 1.04169 8.95829 2.15002 8.95829 4.16669V5.83335C8.95829 7.85002 7.84996 8.95835 5.83329 8.95835ZM4.16663 2.29169C2.84996 2.29169 2.29163 2.85002 2.29163 4.16669V5.83335C2.29163 7.15002 2.84996 7.70835 4.16663 7.70835H5.83329C7.14996 7.70835 7.70829 7.15002 7.70829 5.83335V4.16669C7.70829 2.85002 7.14996 2.29169 5.83329 2.29169H4.16663Z"
-                fill="#104E9E"
-              />
-              <path
-                d="M15.8333 8.95835H14.1666C12.15 8.95835 11.0416 7.85002 11.0416 5.83335V4.16669C11.0416 2.15002 12.15 1.04169 14.1666 1.04169H15.8333C17.85 1.04169 18.9583 2.15002 18.9583 4.16669V5.83335C18.9583 7.85002 17.85 8.95835 15.8333 8.95835ZM14.1666 2.29169C12.85 2.29169 12.2916 2.85002 12.2916 4.16669V5.83335C12.2916 7.15002 12.85 7.70835 14.1666 7.70835H15.8333C17.15 7.70835 17.7083 7.15002 17.7083 5.83335V4.16669C17.7083 2.85002 17.15 2.29169 15.8333 2.29169H14.1666Z"
-                fill="#104E9E"
-              />
-              <path
-                d="M15.8333 18.9584H14.1666C12.15 18.9584 11.0416 17.85 11.0416 15.8334V14.1667C11.0416 12.15 12.15 11.0417 14.1666 11.0417H15.8333C17.85 11.0417 18.9583 12.15 18.9583 14.1667V15.8334C18.9583 17.85 17.85 18.9584 15.8333 18.9584ZM14.1666 12.2917C12.85 12.2917 12.2916 12.85 12.2916 14.1667V15.8334C12.2916 17.15 12.85 17.7084 14.1666 17.7084H15.8333C17.15 17.7084 17.7083 17.15 17.7083 15.8334V14.1667C17.7083 12.85 17.15 12.2917 15.8333 12.2917H14.1666Z"
-                fill="#104E9E"
-              />
-              <path
-                d="M5.83329 18.9584H4.16663C2.14996 18.9584 1.04163 17.85 1.04163 15.8334V14.1667C1.04163 12.15 2.14996 11.0417 4.16663 11.0417H5.83329C7.84996 11.0417 8.95829 12.15 8.95829 14.1667V15.8334C8.95829 17.85 7.84996 18.9584 5.83329 18.9584ZM4.16663 12.2917C2.84996 12.2917 2.29163 12.85 2.29163 14.1667V15.8334C2.29163 17.15 2.84996 17.7084 4.16663 17.7084H5.83329C7.14996 17.7084 7.70829 17.15 7.70829 15.8334V14.1667C7.70829 12.85 7.14996 12.2917 5.83329 12.2917H4.16663Z"
-                fill="#104E9E"
-              />
-            </svg>
-            Только разделы
-          </button>
-          <button
-            class="catalog__tubs-btn catalog__tubs-btn-blue"
-            type="button"
-            aria-pressed="true"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              class="catalog__tubs-img"
-            >
-              <path
-                d="M9.24996 18.9584H5.74996C2.49163 18.9584 1.04163 17.5084 1.04163 14.25V10.75C1.04163 7.49169 2.49163 6.04169 5.74996 6.04169H9.24996C12.5083 6.04169 13.9583 7.49169 13.9583 10.75V14.25C13.9583 17.5084 12.5083 18.9584 9.24996 18.9584ZM5.74996 7.29169C3.16663 7.29169 2.29163 8.16669 2.29163 10.75V14.25C2.29163 16.8334 3.16663 17.7084 5.74996 17.7084H9.24996C11.8333 17.7084 12.7083 16.8334 12.7083 14.25V10.75C12.7083 8.16669 11.8333 7.29169 9.24996 7.29169H5.74996Z"
-                fill="#111111"
-              />
-              <path
-                d="M14.25 13.9584H13.3333C12.9916 13.9584 12.7083 13.675 12.7083 13.3334V10.75C12.7083 8.16669 11.8333 7.29169 9.24996 7.29169H6.66663C6.32496 7.29169 6.04163 7.00835 6.04163 6.66669V5.75002C6.04163 2.49169 7.49163 1.04169 10.75 1.04169H14.25C17.5083 1.04169 18.9583 2.49169 18.9583 5.75002V9.25002C18.9583 12.5084 17.5083 13.9584 14.25 13.9584ZM13.9583 12.7084H14.25C16.8333 12.7084 17.7083 11.8334 17.7083 9.25002V5.75002C17.7083 3.16669 16.8333 2.29169 14.25 2.29169H10.75C8.16663 2.29169 7.29163 3.16669 7.29163 5.75002V6.04169H9.24996C12.5083 6.04169 13.9583 7.49169 13.9583 10.75V12.7084Z"
-                fill="#111111"
-              />
-            </svg>
-            Разделы и товары
-          </button>
-        </div>
-        <div class="catalog__products">
           <load
             src="src/assets/components/category/product-card-in-stock.html"
           />
@@ -176,6 +866,1644 @@
           <load
             src="src/assets/components/category/product-card-best-seller.html"
           />
+          <load
+            src="src/assets/components/category/product-card-in-stock.html"
+          />
+          <load
+            src="src/assets/components/category/product-card-in-stock.html"
+          />
+        </div>
+        <div
+          class="catalog__products category__products-view category__products-view--cards"
+          data-category-products-view="cards"
+          hidden
+        >
+          <load
+            src="src/assets/components/category/product-card-in-stock.html"
+          />
+          <load
+            src="src/assets/components/category/product-card-discount.html"
+          />
+          <load
+            src="src/assets/components/category/product-card-out-of-stock.html"
+          />
+          <load
+            src="src/assets/components/category/product-card-best-seller.html"
+          />
+          <load
+            src="src/assets/components/category/product-card-in-stock.html"
+          />
+          <load
+            src="src/assets/components/category/product-card-in-stock.html"
+          />
+        </div>
+        <div
+          class="catalog__products category__products-view category__products-view--list-dots"
+          data-category-products-view="list-dots"
+          hidden
+        >
+          <article class="product__type2">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <h2 class="product__title">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+                <span class="product__ad product__bestseller">Хит продаж</span>
+              </div>
+              <span class="product__price"> 14 367 ₽ </span>
+              <p class="product__type2-description">
+                Гидростанция — важнейший элемент механизмов, работающих на
+                гидравлических приводах.
+              </p>
+              <div class="product__type2-footer">
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <h2 class="product__title">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+                <span class="product__ad product__new">Новинка</span>
+              </div>
+              <span class="product__price"> 14 367 ₽ </span>
+              <p class="product__type2-description">
+                Гидростанция — важнейший элемент механизмов, работающих на
+                гидравлических приводах.
+              </p>
+              <div class="product__type2-footer">
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <h2 class="product__title">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+                <span class="product__ad product__discount">Скидка</span>
+              </div>
+              <span class="product__price"> 14 367 ₽ </span>
+              <p class="product__type2-description">
+                Гидростанция — важнейший элемент механизмов, работающих на
+                гидравлических приводах.
+              </p>
+              <div class="product__type2-footer">
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <h2 class="product__title">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+              </div>
+              <span class="product__price"> 14 367 ₽ </span>
+              <p class="product__type2-description">
+                Гидростанция — важнейший элемент механизмов, работающих на
+                гидравлических приводах.
+              </p>
+              <div class="product__type2-footer">
+                <div class="product__footer">
+                  <button class="product__order">Заказать</button>
+                </div>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <h2 class="product__title">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+                <span class="product__ad product__bestseller">Хит продаж</span>
+              </div>
+              <span class="product__price"> 14 367 ₽ </span>
+              <p class="product__type2-description">
+                Гидростанция — важнейший элемент механизмов, работающих на
+                гидравлических приводах.
+              </p>
+              <div class="product__type2-footer">
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <h2 class="product__title">
+                  Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+                </h2>
+                <span class="product__ad product__bestseller">Хит продаж</span>
+              </div>
+              <span class="product__price"> 14 367 ₽ </span>
+              <p class="product__type2-description">
+                Гидростанция — важнейший элемент механизмов, работающих на
+                гидравлических приводах.
+              </p>
+              <div class="product__type2-footer">
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div
+          class="catalog__products category__products-view category__products-view--list"
+          data-category-products-view="list"
+          hidden
+        >
+          <article class="product__type2 product__type3">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <span class="product__ad product__new">Новинка</span>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h2 class="product__title">
+                Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+              </h2>
+              <div class="product__type3-footer">
+                <span class="product__price"> 14 367 ₽ </span>
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2 product__type3">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <span class="product__ad product__discount">Скидка</span>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h2 class="product__title">
+                Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+              </h2>
+              <div class="product__type3-footer">
+                <span class="product__price"> 14 367 ₽ </span>
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2 product__type3">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h2 class="product__title">
+                Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+              </h2>
+              <div class="product__type3-footer">
+                <span class="product__price"> 14 367 ₽ </span>
+                <div class="product__footer">
+                  <button class="product__order">Заказать</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2 product__type3">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <span class="product__ad product__bestseller">Хит продаж</span>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h2 class="product__title">
+                Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+              </h2>
+              <div class="product__type3-footer">
+                <span class="product__price"> 14 367 ₽ </span>
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2 product__type3">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <span class="product__ad product__bestseller">Хит продаж</span>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h2 class="product__title">
+                Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+              </h2>
+              <div class="product__type3-footer">
+                <span class="product__price"> 14 367 ₽ </span>
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="product__type2 product__type3">
+            <div class="product__type2-img">
+              <img
+                width="110"
+                height="102"
+                alt="продукт данвард"
+                src="/img/product.jpg"
+              />
+            </div>
+            <div class="product__type2-content">
+              <div class="product__type2-header">
+                <span class="product__ad product__bestseller">Хит продаж</span>
+                <div class="product__actions">
+                  <button class="product__like">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 21.65C11.69 21.65 11.39 21.61 11.14 21.52C7.32 20.21 1.25 15.56 1.25 8.69001C1.25 5.19001 4.08 2.35001 7.56 2.35001C9.25 2.35001 10.83 3.01001 12 4.19001C13.17 3.01001 14.75 2.35001 16.44 2.35001C19.92 2.35001 22.75 5.20001 22.75 8.69001C22.75 15.57 16.68 20.21 12.86 21.52C12.61 21.61 12.31 21.65 12 21.65ZM7.56 3.85001C4.91 3.85001 2.75 6.02001 2.75 8.69001C2.75 15.52 9.32 19.32 11.63 20.11C11.81 20.17 12.2 20.17 12.38 20.11C14.68 19.32 21.26 15.53 21.26 8.69001C21.26 6.02001 19.1 3.85001 16.45 3.85001C14.93 3.85001 13.52 4.56001 12.61 5.79001C12.33 6.17001 11.69 6.17001 11.41 5.79001C10.48 4.55001 9.08 3.85001 7.56 3.85001Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__compare"
+                    type="button"
+                    aria-label="Добавить к сравнению"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.25 3L5.25 21C5.25 21.41 4.91 21.75 4.5 21.75C4.09 21.75 3.75 21.41 3.75 21L3.75 3C3.75 2.59 4.09 2.25 4.5 2.25C4.91 2.25 5.25 2.59 5.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M10.25 11.53L10.25 21C10.25 21.41 9.91 21.75 9.5 21.75C9.09 21.75 8.75 21.41 8.75 21L8.75 11.53C8.75 11.12 9.09 10.78 9.5 10.78C9.91 10.78 10.25 11.11 10.25 11.53Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M15.25 3L15.25 21C15.25 21.41 14.91 21.75 14.5 21.75C14.09 21.75 13.75 21.41 13.75 21L13.75 3C13.75 2.59 14.09 2.25 14.5 2.25C14.91 2.25 15.25 2.59 15.25 3Z"
+                        fill="#888888"
+                      />
+                      <path
+                        d="M20.25 11.53L20.25 21C20.25 21.41 19.91 21.75 19.5 21.75C19.09 21.75 18.75 21.41 18.75 21L18.75 11.53C18.75 11.12 19.09 10.78 19.5 10.78C19.91 10.78 20.25 11.11 20.25 11.53Z"
+                        fill="#888888"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="product__loop"
+                    type="button"
+                    aria-label="Быстрый просмотр товара"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22.6558 21.5516L16.7558 15.6516C18.1736 13.9495 18.8807 11.7663 18.7298 9.55616C18.5789 7.34606 17.5818 5.2792 15.9459 3.78555C14.3099 2.2919 12.1611 1.48645 9.94646 1.53677C7.73178 1.5871 5.62176 2.48931 4.05535 4.05572C2.48893 5.62214 1.58672 7.73216 1.5364 9.94683C1.48608 12.1615 2.29152 14.3103 3.78517 15.9463C5.27882 17.5822 7.34569 18.5793 9.55579 18.7302C11.7659 18.8811 13.949 18.1741 15.6511 16.7562L21.5511 22.6562L22.6558 21.5516ZM3.12461 10.1562C3.12461 8.76559 3.53699 7.40617 4.30959 6.24989C5.0822 5.0936 6.18033 4.19239 7.46512 3.66021C8.74991 3.12803 10.1636 2.98879 11.5276 3.26009C12.8915 3.53139 14.1443 4.20106 15.1277 5.18439C16.111 6.16773 16.7807 7.42058 17.052 8.78451C17.3233 10.1484 17.184 11.5622 16.6519 12.847C16.1197 14.1318 15.2185 15.2299 14.0622 16.0025C12.9059 16.7751 11.5465 17.1875 10.1558 17.1875C8.29169 17.1854 6.50447 16.444 5.1863 15.1258C3.86814 13.8076 3.12668 12.0204 3.12461 10.1562Z"
+                        fill="#888888"
+                      />
+                      <line
+                        x1="10.5"
+                        y1="6"
+                        x2="10.5"
+                        y2="14"
+                        stroke="#888888"
+                      />
+                      <line
+                        x1="14.5"
+                        y1="10.15"
+                        x2="6.5"
+                        y2="10.15"
+                        stroke="#888888"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h2 class="product__title">
+                Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+              </h2>
+              <div class="product__type3-footer">
+                <span class="product__price"> 14 367 ₽ </span>
+                <div class="product__footer">
+                  <button class="product__buyFast">Купить в один клик</button>
+                  <button class="product__addToCart" data-cart-fly>
+                    <span class="product__addToCart-text"> В корзину </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M5.18988 6.38C4.99988 6.38 4.79988 6.3 4.65988 6.16C4.36988 5.87 4.36988 5.39 4.65988 5.1L8.28988 1.47C8.57988 1.18 9.05988 1.18 9.34988 1.47C9.63988 1.76 9.63988 2.24 9.34988 2.53L5.71988 6.16C5.56988 6.3 5.37988 6.38 5.18988 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.8101 6.38C18.6201 6.38 18.4301 6.31 18.2801 6.16L14.6501 2.53C14.3601 2.24 14.3601 1.76 14.6501 1.47C14.9401 1.18 15.4201 1.18 15.7101 1.47L19.3401 5.1C19.6301 5.39 19.6301 5.87 19.3401 6.16C19.2001 6.3 19.0001 6.38 18.8101 6.38Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M20.21 10.6C20.14 10.6 20.07 10.6 20 10.6H19.77H4C3.3 10.61 2.5 10.61 1.92 10.03C1.46 9.57998 1.25 8.87998 1.25 7.84998C1.25 5.09998 3.26 5.09998 4.22 5.09998H19.78C20.74 5.09998 22.75 5.09998 22.75 7.84998C22.75 8.88998 22.54 9.57998 22.08 10.03C21.56 10.55 20.86 10.6 20.21 10.6ZM4.22 9.09998H20.01C20.46 9.10998 20.88 9.10998 21.02 8.96998C21.09 8.89998 21.24 8.65998 21.24 7.84998C21.24 6.71998 20.96 6.59998 19.77 6.59998H4.22C3.03 6.59998 2.75 6.71998 2.75 7.84998C2.75 8.65998 2.91 8.89998 2.97 8.96998C3.11 9.09998 3.54 9.09998 3.98 9.09998H4.22Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9.75977 18.3C9.34977 18.3 9.00977 17.96 9.00977 17.55V14C9.00977 13.59 9.34977 13.25 9.75977 13.25C10.1698 13.25 10.5098 13.59 10.5098 14V17.55C10.5098 17.97 10.1698 18.3 9.75977 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.3599 18.3C13.9499 18.3 13.6099 17.96 13.6099 17.55V14C13.6099 13.59 13.9499 13.25 14.3599 13.25C14.7699 13.25 15.1099 13.59 15.1099 14V17.55C15.1099 17.97 14.7699 18.3 14.3599 18.3Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.8902 22.75H8.86024C5.28024 22.75 4.48024 20.62 4.17024 18.77L2.76024 10.12C2.69024 9.71 2.97024 9.33 3.38024 9.26C3.79024 9.19 4.17024 9.47 4.24024 9.88L5.65024 18.52C5.94024 20.29 6.54024 21.25 8.86024 21.25H14.8902C17.4602 21.25 17.7502 20.35 18.0802 18.61L19.7602 9.86C19.8402 9.45 20.2302 9.18 20.6402 9.27C21.0502 9.35 21.3102 9.74 21.2302 10.15L19.5502 18.9C19.1602 20.93 18.5102 22.75 14.8902 22.75Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </div>

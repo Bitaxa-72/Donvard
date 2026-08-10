@@ -1,0 +1,107 @@
+<div class="contactModal" hidden data-contact-modal>
+  <button
+    class="contactModal__overlay"
+    type="button"
+    aria-label="Закрыть форму"
+    data-contact-modal-close
+  ></button>
+  <div
+    class="contactModal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-modal-title"
+    tabindex="-1"
+  >
+    <button
+      class="contactModal__close"
+      type="button"
+      aria-label="Закрыть форму"
+      data-contact-modal-close
+    ></button>
+    <h2 class="contactModal__title" id="contact-modal-title">
+      Связаться с нами
+    </h2>
+    <form class="contactModal__form" action="#" data-contact-modal-form>
+      <label class="contactModal__field">
+        <span class="contactModal__label">Имя *</span>
+        <input
+          class="contactModal__input"
+          type="text"
+          name="name"
+          placeholder="Введите ваше имя"
+          required
+        />
+      </label>
+      <label class="contactModal__field">
+        <span class="contactModal__label">Номер телефона *</span>
+        <span class="contactModal__phone">
+          <label class="contactModal__phone-country">
+            <img
+              class="contactModal__phone-flag"
+              width="32"
+              height="24"
+              alt=""
+              src="/img/checkout-phone-flag-ru.svg"
+            />
+            <select
+              class="contactModal__phone-select"
+              name="phone_country"
+              aria-label="Страна телефона"
+            >
+              <option value="RU" data-code="+7" selected>Россия +7</option>
+            </select>
+            <img
+              class="contactModal__phone-arrow"
+              width="13"
+              height="8"
+              alt=""
+              src="/img/checkout-phone-arrow.svg"
+            />
+          </label>
+          <span class="contactModal__phone-field">
+            <span class="contactModal__phone-view" aria-hidden="true">
+              <span data-phone-mask-value></span><span data-phone-mask-rest>+7 (000) 000-00-00</span>
+            </span>
+            <input
+              class="contactModal__input contactModal__input--phone"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              inputmode="tel"
+              pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
+              maxlength="18"
+              data-phone-mask
+              required
+            />
+          </span>
+        </span>
+      </label>
+      <label class="contactModal__field">
+        <span class="contactModal__label">Комментарий</span>
+        <textarea
+          class="contactModal__textarea"
+          name="comment"
+          placeholder="Напишите ваш вопрос"
+        ></textarea>
+      </label>
+      <label class="contactModal__agree">
+        <input class="contactModal__agree-input" type="checkbox" required />
+        <span class="contactModal__agree-check" aria-hidden="true"></span>
+        <span class="contactModal__agree-text">
+          Отправляя заявку, вы соглашаетесь с политикой обработки персональных
+          данных
+        </span>
+      </label>
+      <div class="contactModal__captcha" data-contact-captcha></div>
+      <button class="contactModal__submit" type="submit">
+        Отправить заявку
+      </button>
+    </form>
+    <div class="contactModal__success" role="status" hidden>
+      <h3 class="contactModal__success-title">Заявка успешно отправлена</h3>
+      <p class="contactModal__success-text">
+        Ожидайте, мы свяжемся с вами как можно скорее
+      </p>
+    </div>
+  </div>
+</div>

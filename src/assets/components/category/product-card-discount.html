@@ -16,7 +16,7 @@
           />
         </svg>
       </button>
-      <button class="product__cart">
+      <button class="product__compare" type="button" aria-label="Добавить к сравнению">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -42,7 +42,7 @@
           />
         </svg>
       </button>
-      <button class="product__loop">
+      <button class="product__loop" type="button" aria-label="Быстрый просмотр товара">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
@@ -60,22 +60,60 @@
       </button>
     </div>
   </div>
-  <a class="product__content-link" href="product-page.html">
-    <div class="product__img-wrapper">
-      <img
-        class="product__img"
-        width="204"
-        height="190"
-        alt=""
-        src="/img/product.jpg"
-        data-cart-fly-img
-      />
+  <div class="product__content">
+    <div class="product__media">
+      <div class="product__img-wrapper">
+        <img
+          class="product__img"
+          width="204"
+          height="190"
+          alt=""
+          src="/img/product.jpg"
+          data-cart-fly-img
+        />
+      </div>
+      <div class="product__specification productHero__specification">
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Производительность</span>
+          <span class="productHero__specification-value">1 ÷ 30 л/мин</span>
+        </div>
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Максимальное рабочее давление</span>
+          <span class="productHero__specification-value">до 260 бар</span>
+        </div>
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Мощность электродвигателя</span>
+          <span class="productHero__specification-value">0,75 ÷ 5,5 кВт</span>
+        </div>
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Объем бака</span>
+          <span class="productHero__specification-value">15, 30, 60 л</span>
+        </div>
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Рабочая жидкость</span>
+          <span class="productHero__specification-value">Минеральное масло (DIN 51524)</span>
+        </div>
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Напряжение питания</span>
+          <span class="productHero__specification-value">380 В</span>
+        </div>
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Тип исполнения</span>
+          <span class="productHero__specification-value">Стационарное</span>
+        </div>
+        <div class="productHero__specification-item">
+          <span class="productHero__specification-label">Температура эксплуатации</span>
+          <span class="productHero__specification-value">от -20 до +40 °C</span>
+        </div>
+      </div>
     </div>
-    <h2 class="product__title">
-      Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
-    </h2>
-    <span class="product__price"> 14 367 ₽ </span>
-  </a>
+    <a class="product__content-link" href="product-page.html">
+      <h2 class="product__title">
+        Гидростанции серии 1 (электродвигатель от 0,75 до 5,5 кВт)
+      </h2>
+      <span class="product__price"> 14 367 ₽ </span>
+    </a>
+  </div>
   <div class="product__footer">
     <button class="product__buyFast">Купить в один клик</button>
     <button class="product__addToCart" data-cart-fly>

@@ -114,3 +114,69 @@ document
       updateItemsVisibility()
     })
 })
+
+const productCartModal = document.querySelector('[data-product-cart-modal]')
+const productCartModalTriggers = document.querySelectorAll(
+  '.productHero .productHero__addToCart[data-cart-fly]'
+)
+
+if (productCartModal && productCartModalTriggers.length) {
+  const productCartModalDialog = productCartModal.querySelector(
+    '.productCartModal__dialog'
+  )
+  let productCartModalCloseTimer = null
+
+  const getProductCartModalScrollbarWidth = () =>
+    window.innerWidth - document.documentElement.clientWidth
+
+  const setProductCartModalScrollbarCompensation = () => {
+    document.documentElement.style.setProperty(
+      '--product-cart-modal-scrollbar',
+      `${getProductCartModalScrollbarWidth()}px`
+    )
+  }
+
+  const closeProductCartModal = () => {
+    if (productCartModal.hidden) {
+      return
+    }
+
+    productCartModal.classList.remove('productCartModal--open')
+    document.body.classList.remove('productCartModal-open')
+
+    productCartModalCloseTimer = window.setTimeout(() => {
+      productCartModal.hidden = true
+      document.documentElement.style.removeProperty(
+        '--product-cart-modal-scrollbar'
+      )
+    }, 200)
+  }
+
+  const openProductCartModal = () => {
+    setProductCartModalScrollbarCompensation()
+    window.clearTimeout(productCartModalCloseTimer)
+    productCartModal.hidden = false
+    document.body.classList.add('productCartModal-open')
+
+    requestAnimationFrame(() => {
+      productCartModal.classList.add('productCartModal--open')
+      productCartModalDialog?.focus()
+    })
+  }
+
+  productCartModalTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', openProductCartModal)
+  })
+
+  productCartModal
+    .querySelectorAll('[data-product-cart-modal-close]')
+    .forEach((close) => {
+      close.addEventListener('click', closeProductCartModal)
+    })
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !productCartModal.hidden) {
+      closeProductCartModal()
+    }
+  })
+}

@@ -56,7 +56,7 @@ const formatPhone = (value) => {
 };
 
 const updatePhoneView = (input) => {
-  const phone = input.closest(".checkout__phone");
+  const phone = input.closest(".checkout__phone, .contactModal__phone");
   const value = phone?.querySelector("[data-phone-mask-value]");
   const rest = phone?.querySelector("[data-phone-mask-rest]");
 

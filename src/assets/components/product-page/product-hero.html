@@ -261,7 +261,7 @@
     <div class="productHero__cart">
       <div class="productHero__actions">
         <span class="productHero__lead"> Оставить заявку </span>
-        <button class="productHero__addToCart" data-cart-fly>
+        <button class="productHero__addToCart" type="button" data-cart-fly>
           Добавить в корзину
         </button>
         <button class="productHero__buyNow">Купить в один клик</button>
@@ -270,6 +270,37 @@
       <span class="productHero__price">
         Цена:<span class="productHero__price-value">14 367 ₽</span>
       </span>
+    </div>
+  </div>
+  <div class="productCartModal" hidden data-product-cart-modal>
+    <button
+      class="productCartModal__overlay"
+      type="button"
+      aria-label="Закрыть окно"
+      data-product-cart-modal-close
+    ></button>
+    <div
+      class="productCartModal__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="product-cart-modal-title"
+      tabindex="-1"
+    >
+      <button
+        class="productCartModal__close"
+        type="button"
+        aria-label="Закрыть окно"
+        data-product-cart-modal-close
+      ></button>
+      <h2 class="productCartModal__title" id="product-cart-modal-title">
+        Хотите вернуться?
+      </h2>
+      <a class="productCartModal__link productCartModal__link--catalog" href="/catalog.html">
+        Продолжить покупки
+      </a>
+      <a class="productCartModal__link productCartModal__link--cart" href="/cart.html">
+        Оформить заказ
+      </a>
     </div>
   </div>
 </section>
